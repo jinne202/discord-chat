@@ -31,7 +31,6 @@ const RegisterPage = () => {
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
         if (!mismatchPassword) {
-            console.log("회원가입 성공");
             setSignUpError('');
             setSignUpSuccess(false);
             axios.post('/api/users', {
@@ -39,11 +38,9 @@ const RegisterPage = () => {
                 nickname,
                 password
             }).then((response) => {
-                    console.log(response);
                     setSignUpSuccess(true);
                 })
                 .catch((error) => {
-                    console.log(error.response);
                     setSignUpError(error.response.data);
                 })
                 .finally(() => {});

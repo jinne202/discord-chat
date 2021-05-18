@@ -41,5 +41,5 @@ export const ChatContents = styled.div`
 export const MentionMember = styled.div`
     color : #58DEA5;
     display : inline-block;
-    
+  
 `

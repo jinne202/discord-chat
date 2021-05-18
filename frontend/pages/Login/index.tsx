@@ -24,7 +24,6 @@ const LoginPage = () => {
 
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        console.log(email,password)
         axios.post('http://localhost:3095/api/users/login', {
             email, password
         }, {
